@@ -1,0 +1,15 @@
+sudo: required
+
+services:
+  - docker
+
+
+language: python
+
+install:
+  - pip install pipenv
+  - pipenv install
+
+
+script:
+  - source $(pipenv --venv)/bin/activate && molecule test

@@ -15,7 +15,7 @@ def test_hosts_file(host):
 
 
 def test_dnsmasq_package(host):
-    dnsmasq_package = host.package('dnsmasq')
+    exc_dnsmasq_package = host.package('dnsmasq')
 
-    assert dnsmasq_package.is_installed
-    assert dnsmasq_package.version.startswith("2.76")
+    assert exc_dnsmasq_package.is_installed
+    assert exc_dnsmasq_package.version.startswith("2.76")
