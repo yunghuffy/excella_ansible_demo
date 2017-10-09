@@ -1,0 +1,13 @@
+---
+
+- name: Hosts file presence
+  file:
+    path: /etc/hosts
+    owner: root
+    group: root
+
+
+- name: Update dnsmasq
+  package:
+    name: dnsmasq
+    state: present
